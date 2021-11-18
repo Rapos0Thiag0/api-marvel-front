@@ -5,23 +5,206 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"
-    ></script>
-    <script defer src="./index.js"></script>
+    <script src="./index.js"></script>
     <title>API MARVEL</title>
   </head>
-  <body></body>
+  <body class="bg-dark vh-100 vw-100">
+    <main class="container-fluid">
+      <!-- navegação, pode receber outros componetes como home, no momento está com a logo e buscar -->
+      <nav class="navbar navbar-light bg-dark">
+        <div class="container-fluid m-0 p-0">
+          <a class="navbar-brand"
+            ><img src="../imgs/logo.png" alt="" width="150" height="50"
+          /></a>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </nav>
+      <!-- carrossel como header da página -->
+      <section class="col-12 mb-3">
+        <div
+          class="carousel slide carousel-fade"
+          data-bs-ride="carousel"
+          id="carouselHeader"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                style="height: 40vh"
+                class="d-block w-100"
+                alt="Carousel 1"
+                src="../imgs/img2.jpg"
+              />
+            </div>
+            <div class="carousel-item" data-bs-interval="4000">
+              <img
+                style="height: 40vh"
+                class="d-block w-100"
+                alt="Carousel 2"
+                src="../imgs/img1.jpg"
+              />
+            </div>
+            <div class="carousel-item" data-bs-interval="4000">
+              <img
+                style="height: 40vh"
+                class="d-block w-100"
+                alt="Carousel 3"
+                src="../imgs/img3.jpg"
+              />
+            </div>
+            <div class="carousel-item" data-bs-interval="4000">
+              <img
+                style="height: 40vh"
+                class="d-block w-100"
+                alt="Carousel 4"
+                src="../imgs/img4.jpg"
+              />
+            </div>
+            <div class="carousel-item" data-bs-interval="4000">
+              <img
+                style="height: 40vh"
+                class="d-block w-100"
+                alt="Carousel 5"
+                src="../imgs/img5.jpg"
+              />
+            </div>
+            <div class="carousel-item" data-bs-interval="4000">
+              <img
+                style="height: 40vh"
+                class="d-block w-100"
+                alt="Carousel 6"
+                src="../imgs/img6.jpg"
+              />
+            </div>
+            <div class="carousel-item" data-bs-interval="4000">
+              <img
+                style="height: 40vh"
+                class="d-block w-100"
+                alt="Carousel 7"
+                src="../imgs/img7.jpg"
+              />
+            </div>
+            <div class="carousel-item" data-bs-interval="4000">
+              <img
+                style="height: 40vh"
+                class="d-block w-100"
+                alt="Carousel 8"
+                src="../imgs/img8.jpg"
+              />
+            </div>
+            <div class="carousel-item" data-bs-interval="4000">
+              <img
+                style="height: 40vh"
+                class="d-block w-100"
+                alt="Carousel 9"
+                src="../imgs/img9.jpg"
+              />
+            </div>
+            <div class="carousel-item" data-bs-interval="4000">
+              <img
+                style="height: 40vh"
+                class="d-block w-100"
+                alt="Carousel 10"
+                src="../imgs/img10.jpg"
+              />
+            </div>
+            <div class="carousel-item" data-bs-interval="4000">
+              <img
+                style="height: 40vh"
+                class="d-block w-100"
+                alt="Carousel 11"
+                src="../imgs/img11.jpg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- section de entrada dos objetos a serem inceridos nos cards -->
+      <section class="row row-cols-2 row-cols-lg-6 g-2 g-lg-3">
+        <div class="col">
+          <div id="char-card" class="p-1 border bg-light">
+            <div class="card bg-dark text-white">
+              <img
+                src="../imgs/personagem teste.jpeg"
+                class="card-img"
+                alt="personagem #"
+              />
+              <div
+                class="
+                  d-flex
+                  justify-content-center
+                  align-items-end
+                  card-img-overlay
+                  p-1
+                "
+              >
+                <h5 class="card-text">Capitã Marvel</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- fotter que recebe a paginação para navegar nas páginas existentes -->
+      <footer class="row fixed-bottom">
+        <div class="col-12">
+          <nav class="mt-3" aria-label="Page navigation example">
+            <ul class="pagination justify-content-center m-0">
+              <li class="page-item">
+                <a class="page-link" onclick="listaPersonagem(1)">Primeira</a>
+              </li>
+              <li class="page-item">
+                <a
+                  id="anterior"
+                  class="page-link"
+                  onclick="listaPersonagem(currentPage-1)"
+                  >1</a
+                >
+              </li>
+              <li class="page-item">
+                <a
+                  id="atual"
+                  class="page-link"
+                  onclick="listaPersonagem(currentPage)"
+                  >2</a
+                >
+              </li>
+              <li class="page-item">
+                <a
+                  id="seguinte"
+                  class="page-link"
+                  onclick="listaPersonagem(currentPage+1)"
+                  >3</a
+                >
+              </li>
+              <li class="page-item">
+                <a class="page-link" onclick="listaPersonagem(lastPage)"
+                  >Última</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </footer>
+    </main>
+  </body>
 </html>
