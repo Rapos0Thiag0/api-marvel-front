@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -20,7 +21,7 @@
     <title>API MARVEL</title>
   </head>
   <body class="bg-dark vh-100 vw-100">
-    <main class="container-fluid">
+    <main id="main" class="container-fluid vh-100">
       <!-- navegação, pode receber outros componetes como home, no momento está com a logo e buscar -->
       <nav class="navbar navbar-light bg-dark">
         <div class="container-fluid m-0 p-0">
@@ -31,12 +32,10 @@
             <input
               class="form-control me-2"
               type="search"
-              placeholder="Search"
-              aria-label="Search"
+              placeholder="Buscar"
+              aria-label="Pesquisar"
             />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
+            <button class="btn btn-success" type="submit">Search</button>
           </form>
         </div>
       </nav>
@@ -47,90 +46,90 @@
           data-bs-ride="carousel"
           id="carouselHeader"
         >
-          <div class="carousel-inner">
+          <div class="carousel-inner rounded-2">
             <div class="carousel-item active">
               <img
-                style="height: 40vh"
+                style="height: 30vh"
                 class="d-block w-100"
                 alt="Carousel 1"
                 src="../imgs/img2.jpg"
               />
             </div>
-            <div class="carousel-item" data-bs-interval="4000">
+            <div class="carousel-item" data-bs-interval="3000">
               <img
-                style="height: 40vh"
+                style="height: 30vh"
                 class="d-block w-100"
                 alt="Carousel 2"
                 src="../imgs/img1.jpg"
               />
             </div>
-            <div class="carousel-item" data-bs-interval="4000">
+            <div class="carousel-item" data-bs-interval="3000">
               <img
-                style="height: 40vh"
+                style="height: 30vh"
                 class="d-block w-100"
                 alt="Carousel 3"
                 src="../imgs/img3.jpg"
               />
             </div>
-            <div class="carousel-item" data-bs-interval="4000">
+            <div class="carousel-item" data-bs-interval="3000">
               <img
-                style="height: 40vh"
+                style="height: 30vh"
                 class="d-block w-100"
                 alt="Carousel 4"
                 src="../imgs/img4.jpg"
               />
             </div>
-            <div class="carousel-item" data-bs-interval="4000">
+            <div class="carousel-item" data-bs-interval="3000">
               <img
-                style="height: 40vh"
+                style="height: 30vh"
                 class="d-block w-100"
                 alt="Carousel 5"
                 src="../imgs/img5.jpg"
               />
             </div>
-            <div class="carousel-item" data-bs-interval="4000">
+            <div class="carousel-item" data-bs-interval="3000">
               <img
-                style="height: 40vh"
+                style="height: 30vh"
                 class="d-block w-100"
                 alt="Carousel 6"
                 src="../imgs/img6.jpg"
               />
             </div>
-            <div class="carousel-item" data-bs-interval="4000">
+            <div class="carousel-item" data-bs-interval="3000">
               <img
-                style="height: 40vh"
+                style="height: 30vh"
                 class="d-block w-100"
                 alt="Carousel 7"
                 src="../imgs/img7.jpg"
               />
             </div>
-            <div class="carousel-item" data-bs-interval="4000">
+            <div class="carousel-item" data-bs-interval="3000">
               <img
-                style="height: 40vh"
+                style="height: 30vh"
                 class="d-block w-100"
                 alt="Carousel 8"
                 src="../imgs/img8.jpg"
               />
             </div>
-            <div class="carousel-item" data-bs-interval="4000">
+            <div class="carousel-item" data-bs-interval="3000">
               <img
-                style="height: 40vh"
+                style="height: 30vh"
                 class="d-block w-100"
                 alt="Carousel 9"
                 src="../imgs/img9.jpg"
               />
             </div>
-            <div class="carousel-item" data-bs-interval="4000">
+            <div class="carousel-item" data-bs-interval="3000">
               <img
-                style="height: 40vh"
+                style="height: 30vh"
                 class="d-block w-100"
                 alt="Carousel 10"
                 src="../imgs/img10.jpg"
               />
             </div>
-            <div class="carousel-item" data-bs-interval="4000">
+            <div class="carousel-item" data-bs-interval="3000">
               <img
-                style="height: 40vh"
+                style="height: 30vh"
                 class="d-block w-100"
                 alt="Carousel 11"
                 src="../imgs/img11.jpg"
@@ -142,25 +141,27 @@
       <!-- section de entrada dos objetos a serem inceridos nos cards -->
       <section class="row row-cols-2 row-cols-lg-6 g-2 g-lg-3">
         <div class="col">
-          <div id="char-card" class="p-1 border bg-light">
-            <div class="card bg-dark text-white">
-              <img
-                src="../imgs/personagem teste.jpeg"
-                class="card-img"
-                alt="personagem #"
-              />
-              <div
-                class="
-                  d-flex
-                  justify-content-center
-                  align-items-end
-                  card-img-overlay
-                  p-1
-                "
-              >
-                <h5 class="card-text">Capitã Marvel</h5>
+          <div id="char-card" class="p-1 mb-2 rounded-2">
+            <a href="../html/descricao.html" target="_black">
+              <div class="card bg-dark text-white">
+                <img
+                  src="../imgs/personagem teste.jpeg"
+                  class="card-img"
+                  alt="personagem #"
+                />
+                <div
+                  class="
+                    d-flex
+                    justify-content-center
+                    align-items-end
+                    card-img-overlay
+                    p-1
+                  "
+                >
+                  <h5 class="card-text">Capitã Marvel</h5>
+                </div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </section>
