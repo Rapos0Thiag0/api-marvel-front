@@ -1,9 +1,23 @@
 #main {
-  padding-left: 8vw;
-  padding-right: 8vw;
+  padding: 0 8vw 0 8vw;
 }
 
 #char-card:hover {
   transform: scale(1.02);
   box-shadow: 0 0.25rem 1rem hsl(0, 0%, 88.6%);
+}
+#char-card-desc:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0.25rem 1rem hsl(0, 0%, 88.6%);
+}
+
+#img-desc {
+  width: 515px;
+  height: 250px;
+}
+
+#header-desc {
+  background: url(https://c.tenor.com/EItt_zeNLGwAAAAC/abell46s-logo.gif);
+  background-size: cover;
+  background-position: center;
 }

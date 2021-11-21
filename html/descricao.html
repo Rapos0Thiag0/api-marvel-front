@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js"></script>
+    <title>API MARVEL</title>
+  </head>
+  <body class="bg-dark vh-100 vw-100 text-white">
+    <main id="main" class="container-fluid vh-100">
+      <!-- navegação, pode receber outros componetes como home, no momento está com a logo e buscar -->
+      <nav class="navbar navbar-light bg-dark">
+        <div class="container-fluid m-0 p-0">
+          <a class="navbar-brand"
+            ><img src="../imgs/logo.png" alt="" width="150" height="50"
+          /></a>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Buscar"
+              aria-label="Pesquisar"
+            />
+            <button class="btn btn-primary" type="submit">Search</button>
+
+            <button class="btn ms-2 btn-success" type="submit">voltar</button>
+          </form>
+        </div>
+      </nav>
+      <header id="header-desc" class="container-fluid p-0">
+        <div class="row mx-4">
+          <figure class="col align-self-center m-2 ps-0">
+            <img
+              id="img-desc"
+              src="../imgs/personagem teste.jpeg"
+              class="card-img p-1 border bg-light"
+              alt="personagem #"
+            />
+          </figure>
+          <div class="container-fluid rounded-2 bg-dark opacity-75 col m-4 p-3">
+            <h5 class="opacity-100 ps-3 text-uppercase">Capitã Marvel</h5>
+            <p class="opacity-100 ps-3 pt-1">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+              nobis totam id amet magni dolorum nisi accusamus quod quidem modi
+              perspiciatis, enim sequi magnam natus facilis ipsa explicabo
+              commodi suscipit! Quo soluta maxime sit velit doloribus unde,
+              labore consequuntur magnam veritatis explicabo laudantium cumque.
+              Optio dignissimos, necessitatibus id officiis eos cum ex omnis?
+            </p>
+          </div>
+        </div>
+      </header>
+      <!-- section de entrada dos objetos a serem inceridos nos cards -->
+      <section class="row mt-2 row-cols-2 row-cols-lg-4 g-2 g-lg-3">
+        <div class="col p-0">
+          <div id="char-card-desc" class="p-1 rounded-2">
+            <a
+              id="a"
+              href="../html/descricao.html"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              title="Capitã Marvel"
+              target="_black"
+            >
+              <div class="card bg-light p-1 text-white rounded-2">
+                <img
+                  src="../imgs/personagem teste.jpeg"
+                  class="card-img"
+                  alt="personagem #"
+                />
+                <div
+                  class="
+                    d-flex
+                    justify-content-center
+                    align-items-end
+                    card-img-overlay
+                    p-1
+                  "
+                >
+                  <h5 class="card-text">Capitã Marvel</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col p-0">
+          <div id="char-card-desc" class="p-1 rounded-2">
+            <a
+              id="a"
+              href="../html/descricao.html"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              title="Capitã Marvel"
+              target="_black"
+            >
+              <div class="card bg-light p-1 text-white rounded-2">
+                <img
+                  src="../imgs/personagem teste.jpeg"
+                  class="card-img"
+                  alt="personagem #"
+                />
+                <div
+                  class="
+                    d-flex
+                    justify-content-center
+                    align-items-end
+                    card-img-overlay
+                    p-1
+                  "
+                >
+                  <h5 class="card-text">Capitã Marvel</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col p-0">
+          <div id="char-card-desc" class="p-1 rounded-2">
+            <a
+              id="a"
+              href="../html/descricao.html"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              title="Capitã Marvel"
+              target="_black"
+            >
+              <div class="card bg-light p-1 text-white rounded-2">
+                <img
+                  src="../imgs/personagem teste.jpeg"
+                  class="card-img"
+                  alt="personagem #"
+                />
+                <div
+                  class="
+                    d-flex
+                    justify-content-center
+                    align-items-end
+                    card-img-overlay
+                    p-1
+                  "
+                >
+                  <h5 class="card-text">Capitã Marvel</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col p-0">
+          <div id="char-card-desc" class="p-1 rounded-2">
+            <a
+              id="a"
+              href="../html/descricao.html"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              title="Capitã Marvel"
+              target="_black"
+            >
+              <div class="card bg-light p-1 text-white rounded-2">
+                <img
+                  src="../imgs/personagem teste.jpeg"
+                  class="card-img"
+                  alt="personagem #"
+                />
+                <div
+                  class="
+                    d-flex
+                    justify-content-center
+                    align-items-end
+                    card-img-overlay
+                    p-1
+                  "
+                >
+                  <h5 class="card-text">Capitã Marvel</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- fotter que recebe a paginação para navegar nas páginas existentes -->
+      <footer class="row fixed-bottom">
+        <div class="col-12">
+          <nav class="mt-3" aria-label="Page navigation example">
+            <ul class="pagination justify-content-center m-0">
+              <li class="page-item">
+                <a class="page-link" onclick="listaPersonagem(1)">Primeira</a>
+              </li>
+              <li class="page-item">
+                <a
+                  id="anterior"
+                  class="page-link"
+                  onclick="listaPersonagem(currentPage-1)"
+                  >1</a
+                >
+              </li>
+              <li class="page-item">
+                <a
+                  id="atual"
+                  class="page-link"
+                  onclick="listaPersonagem(currentPage)"
+                  >2</a
+                >
+              </li>
+              <li class="page-item">
+                <a
+                  id="seguinte"
+                  class="page-link"
+                  onclick="listaPersonagem(currentPage+1)"
+                  >3</a
+                >
+              </li>
+              <li class="page-item">
+                <a class="page-link" onclick="listaPersonagem(lastPage)"
+                  >Última</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </footer>
+    </main>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script>
+      // Inicializa tooltips
+      var tooltipTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      );
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    </script>
+  </body>
+</html>
