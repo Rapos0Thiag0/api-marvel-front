@@ -21,3 +21,8 @@
   background-size: cover;
   background-position: center;
 }
+
+#col-card {
+  display: flex;
+  justify-content: space-between;
+}

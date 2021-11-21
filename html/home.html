@@ -11,7 +11,7 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./index.js"></script>
+    <script src="../js/index.js"></script>
     <title>API MARVEL</title>
   </head>
   <body class="bg-dark vh-100 vw-100">
@@ -133,35 +133,13 @@
         </div>
       </section>
       <!-- section de entrada dos objetos a serem inceridos nos cards -->
-      <section class="row row-cols-2 row-cols-lg-6 g-2 g-lg-3">
-        <div class="col">
-          <div id="char-card" class="p-1 mb-2 rounded-2">
-            <a
-              href="../html/descricao.html"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title="Capitã Marvel"
-              target="_black"
-            >
-              <div class="card bg-light p-1 text-white">
-                <img
-                  src="../imgs/personagem teste.jpeg"
-                  class="card-img"
-                  alt="personagem #"
-                />
-                <div
-                  class="
-                    d-flex
-                    justify-content-center
-                    align-items-end
-                    card-img-overlay
-                    p-1
-                  "
-                >
-                  <h5 class="card-text">Capitã Marvel</h5>
-                </div>
-              </div>
-            </a>
+      <section class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div
+              id="col-card"
+              class="row row-cols-2 row-cols-lg-6 g-2 g-lg-3"
+            ></div>
           </div>
         </div>
       </section>
