@@ -2,7 +2,7 @@ const url = "https://marvelapr.herokuapp.com/";
 let currentPage = 1;
 let lastPage;
 
-function listaPersonagem(pagina) {
+function listaPersonagens(pagina) {
   if (pagina > 0) currentPage = pagina;
   if (pagina == 1) {
     document.querySelector("#anterior").style.display = "none";
@@ -17,7 +17,7 @@ function listaPersonagem(pagina) {
     .get(`${url}personagens`, {
       params: {
         page: currentPage,
-        limit: 15,
+        limit: 12,
       },
     })
     .then((response) => {
@@ -32,15 +32,15 @@ function listaPersonagem(pagina) {
         document.querySelector("#col-card").innerHTML += `
         <div id="char-card" class="p-1 mb-2 rounded-2">
         <a
-        href="../html/descricao.html"
+        onclick="carregarPersonagem(${personagem.id})"
         data-bs-toggle="tooltip"
         data-bs-placement="top"
-        title=${personagem.nome}
-        target="_black"
+        title=${personagem.nome}        
       >
         <div class="card bg-light p-1 text-white" style="diplay: inline-block;">
           <img
-            id="img-card"
+          
+            id=${personagem.id}
             src=${personagem.image.path}.${personagem.image.extension}
             class="card-img"
             alt="personagem #"
@@ -64,6 +64,11 @@ function listaPersonagem(pagina) {
     });
 }
 
+function carregarPersonagem(id) {
+  window.location.href = `../html/descricao.html?${id}`;
+  // let id = mouseEvent.target.id;
+}
+
 document.addEventListener("DOMContentLoaded", () => {
-  listaPersonagem(currentPage);
+  listaPersonagens(currentPage);
 });

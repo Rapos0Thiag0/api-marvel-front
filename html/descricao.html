@@ -17,7 +17,7 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
-    <script src="./index.js"></script>
+    <script src="../js/descricao.js"></script>
     <title>API MARVEL</title>
   </head>
   <body class="bg-dark vh-100 vw-100 text-white">
@@ -36,159 +36,25 @@
               aria-label="Pesquisar"
             />
             <button class="btn btn-primary" type="submit">Search</button>
-
-            <button class="btn ms-2 btn-success" type="submit">voltar</button>
+            <h1 class="tituloTeste"></h1>
+            <a
+              class="btn ms-2 btn-success"
+              href="../html/home.html"
+              type="button"
+              >voltar</a
+            >
           </form>
         </div>
       </nav>
-      <header id="header-desc" class="container-fluid p-0">
-        <div class="row mx-4">
-          <figure class="col align-self-center m-2 ps-0">
-            <img
-              id="img-desc"
-              src="../imgs/personagem teste.jpeg"
-              class="card-img p-1 border bg-light"
-              alt="personagem #"
-            />
-          </figure>
-          <div class="container-fluid rounded-2 bg-dark opacity-75 col m-4 p-3">
-            <h5 class="opacity-100 ps-3 text-uppercase">Capitã Marvel</h5>
-            <p class="opacity-100 ps-3 pt-1">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-              nobis totam id amet magni dolorum nisi accusamus quod quidem modi
-              perspiciatis, enim sequi magnam natus facilis ipsa explicabo
-              commodi suscipit! Quo soluta maxime sit velit doloribus unde,
-              labore consequuntur magnam veritatis explicabo laudantium cumque.
-              Optio dignissimos, necessitatibus id officiis eos cum ex omnis?
-            </p>
-          </div>
-        </div>
-      </header>
+      <!-- Cria  -->
+      <header id="header-desc" class="container-fluid p-0"></header>
       <!-- section de entrada dos objetos a serem inceridos nos cards -->
-      <section class="row mt-2 row-cols-2 row-cols-lg-4 g-2 g-lg-3">
-        <div class="col p-0">
-          <div id="char-card-desc" class="p-1 rounded-2">
-            <a
-              id="a"
-              href="../html/descricao.html"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title="Capitã Marvel"
-              target="_black"
-            >
-              <div class="card bg-light p-1 text-white rounded-2">
-                <img
-                  src="../imgs/personagem teste.jpeg"
-                  class="card-img"
-                  alt="personagem #"
-                />
-                <div
-                  class="
-                    d-flex
-                    justify-content-center
-                    align-items-end
-                    card-img-overlay
-                    p-1
-                  "
-                >
-                  <h5 class="card-text">Capitã Marvel</h5>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col p-0">
-          <div id="char-card-desc" class="p-1 rounded-2">
-            <a
-              id="a"
-              href="../html/descricao.html"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title="Capitã Marvel"
-              target="_black"
-            >
-              <div class="card bg-light p-1 text-white rounded-2">
-                <img
-                  src="../imgs/personagem teste.jpeg"
-                  class="card-img"
-                  alt="personagem #"
-                />
-                <div
-                  class="
-                    d-flex
-                    justify-content-center
-                    align-items-end
-                    card-img-overlay
-                    p-1
-                  "
-                >
-                  <h5 class="card-text">Capitã Marvel</h5>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col p-0">
-          <div id="char-card-desc" class="p-1 rounded-2">
-            <a
-              id="a"
-              href="../html/descricao.html"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title="Capitã Marvel"
-              target="_black"
-            >
-              <div class="card bg-light p-1 text-white rounded-2">
-                <img
-                  src="../imgs/personagem teste.jpeg"
-                  class="card-img"
-                  alt="personagem #"
-                />
-                <div
-                  class="
-                    d-flex
-                    justify-content-center
-                    align-items-end
-                    card-img-overlay
-                    p-1
-                  "
-                >
-                  <h5 class="card-text">Capitã Marvel</h5>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col p-0">
-          <div id="char-card-desc" class="p-1 rounded-2">
-            <a
-              id="a"
-              href="../html/descricao.html"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title="Capitã Marvel"
-              target="_black"
-            >
-              <div class="card bg-light p-1 text-white rounded-2">
-                <img
-                  src="../imgs/personagem teste.jpeg"
-                  class="card-img"
-                  alt="personagem #"
-                />
-                <div
-                  class="
-                    d-flex
-                    justify-content-center
-                    align-items-end
-                    card-img-overlay
-                    p-1
-                  "
-                >
-                  <h5 class="card-text">Capitã Marvel</h5>
-                </div>
-              </div>
-            </a>
-          </div>
+      <section class="row">
+        <div class="col-12">
+          <div
+            id="comic-card"
+            class="row row-cols-2 row-cols-lg-6 g-2 g-lg-3"
+          ></div>
         </div>
       </section>
       <!-- fotter que recebe a paginação para navegar nas páginas existentes -->
