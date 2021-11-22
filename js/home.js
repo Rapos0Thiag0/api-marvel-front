@@ -1,4 +1,4 @@
-const url = "https://marvelapr.herokuapp.com/";
+const url = "https://marvelapr.herokuapp.com/personagens?";
 let currentPage = 1;
 let lastPage;
 
@@ -14,9 +14,9 @@ function listaPersonagens(pagina) {
   document.querySelector("#seguinte").textContent = currentPage + 1;
 
   axios
-    .get(`${url}personagens`, {
+    .get(`${url}`, {
       params: {
-        page: currentPage,
+        page: currentPage - 1,
         limit: 12,
       },
     })
@@ -26,35 +26,34 @@ function listaPersonagens(pagina) {
     .then((data) => {
       document.querySelector("#col-card").innerHTML = "";
 
-      lastPage = data.totalPages;
+      lastPage = Math.floor(data.totalPages);
 
       data.personagens.forEach((personagem) => {
         document.querySelector("#col-card").innerHTML += `
-        <div id="char-card" class="p-1 mb-2 rounded-2">
+        <div id="char-card"  class=" mb-0 p-1 rounded-2">
         <a
         onclick="carregarPersonagem(${personagem.id})"
         data-bs-toggle="tooltip"
         data-bs-placement="top"
         title=${personagem.nome}        
       >
-        <div class="card bg-light p-1 text-white" style="diplay: inline-block;">
-          <img
-          
-            id=${personagem.id}
-            src=${personagem.image.path}.${personagem.image.extension}
-            class="card-img"
-            alt="personagem #"
-          />
-          <div
-            class="
-              d-flex
-              justify-content-center
-              align-items-end
-              card-img-overlay
-              p-1
-            "
-          >
-            <h5 class="card-text">${personagem.nome} </h5>
+      <div class="card bg-secundary p-1 text-black rounded-2">
+      <img
+      id="${personagem.id} "
+        src=${personagem.image.path}.${personagem.image.extension}
+        class="card-img-top"
+        alt="personagem #"
+      />
+      <div
+        class="
+          d-flex
+          justify-content-center
+          align-items-end
+          card-body
+          p-1
+        "
+      >
+            <h6 class="card-text">${personagem.nome} </h6>
           </div>
         </div>
       </a>
@@ -65,8 +64,9 @@ function listaPersonagens(pagina) {
 }
 
 function carregarPersonagem(id) {
-  window.location.href = `../html/descricao.html?${id}`;
-  // let id = mouseEvent.target.id;
+  let personagemSelecionado = id;
+  localStorage.setItem("id", JSON.stringify(personagemSelecionado));
+  window.location.href = `../html/descricao.html?${personagemSelecionado}`;
 }
 
 document.addEventListener("DOMContentLoaded", () => {

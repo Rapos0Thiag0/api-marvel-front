@@ -15,10 +15,10 @@
     <title>API MARVEL</title>
   </head>
   <body class="bg-dark vh-100 vw-100">
-    <main id="main" class="container-fluid vh-100">
+    <main id="main" class="container-fluid justify-content-evenly vh-100">
       <!-- navegação, pode receber outros componetes como home, no momento está com a logo e buscar -->
-      <nav class="navbar navbar-light bg-dark">
-        <div class="container-fluid m-0 p-0">
+      <nav class="navbar navbar-light p-0 bg-dark">
+        <div class="container-fluid p-0">
           <a class="navbar-brand"
             ><img src="../imgs/logo.png" alt="" width="150" height="50"
           /></a>
@@ -34,7 +34,7 @@
         </div>
       </nav>
       <!-- carrossel como header da página -->
-      <section class="col-12 mb-3">
+      <section class="col-12 mb-1">
         <div
           class="carousel slide carousel-fade"
           data-bs-ride="carousel"
@@ -146,15 +146,17 @@
       <!-- fotter que recebe a paginação para navegar nas páginas existentes -->
       <footer class="row fixed-bottom">
         <div class="col-12">
-          <nav class="mt-3" aria-label="Page navigation example">
-            <ul class="pagination justify-content-center m-0">
+          <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center p-0 m-0">
               <li class="page-item">
-                <a class="page-link" onclick="listaPersonagens(1)">Primeira</a>
+                <a class="page-link p-1" onclick="listaPersonagens(1)"
+                  >Primeira</a
+                >
               </li>
               <li class="page-item">
                 <a
                   id="anterior"
-                  class="page-link"
+                  class="page-link p-1"
                   onclick="listaPersonagens(currentPage-1)"
                   >1</a
                 >
@@ -162,7 +164,7 @@
               <li class="page-item">
                 <a
                   id="atual"
-                  class="page-link"
+                  class="page-link p-1"
                   onclick="listaPersonagens(currentPage)"
                   >2</a
                 >
@@ -170,13 +172,13 @@
               <li class="page-item">
                 <a
                   id="seguinte"
-                  class="page-link"
+                  class="page-link p-1"
                   onclick="listaPersonagens(currentPage+1)"
                   >3</a
                 >
               </li>
               <li class="page-item">
-                <a class="page-link" onclick="listaPersonagens(lastPage)"
+                <a class="page-link p-1" onclick="listaPersonagens(lastPage)"
                   >Última</a
                 >
               </li>

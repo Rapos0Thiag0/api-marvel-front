@@ -1,5 +1,5 @@
 #main {
-  padding: 0 8vw 0 8vw;
+  padding: 0 12vw 0 12vw;
 }
 
 #char-card:hover {
@@ -30,4 +30,14 @@
 .card-img {
   width: 120px;
   height: 120px;
+}
+.card-img-top {
+  width: 120px;
+  height: 120px;
+}
+
+h6 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
