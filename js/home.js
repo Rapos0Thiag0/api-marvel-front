@@ -1,4 +1,4 @@
-const url = "https://marvelapr.herokuapp.com/personagens?";
+const url = "https://apimarvel-first.herokuapp.com/personagens?";
 let currentPage = 1;
 let lastPage;
 
@@ -66,7 +66,7 @@ function listaPersonagens(pagina) {
 function carregarPersonagem(id) {
   let personagemSelecionado = id;
   localStorage.setItem("id", JSON.stringify(personagemSelecionado));
-  window.location.href = `../html/descricao.html?${personagemSelecionado}`;
+  window.location.href = `../html/descricao.html?id=${personagemSelecionado}`;
 }
 
 document.addEventListener("DOMContentLoaded", () => {

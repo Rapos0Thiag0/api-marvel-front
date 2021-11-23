@@ -1,18 +1,17 @@
-const url = "https://marvelapr.herokuapp.com/personagens";
+const url = "https://apimarvel-first.herokuapp.com/personagens/";
+const urlComic = "https://apimarvel-first.herokuapp.com/comic/";
 let personagemId = JSON.parse(localStorage.getItem("id"));
 
 function descrevePersonagem(idPersonagem) {
   axios
-    .get(`${url}/` + idPersonagem)
+    .get(`${url}` + idPersonagem)
     .then((response) => {
+      // console.log(response.data);
       return response.data;
     })
-
     .then((data) => {
       document.querySelector("#header-desc").innerHTML = "";
-      document.querySelector("#comic-card").innerHTML = "";
       let personagem = data[0];
-      let comics = data[0].comics.items;
 
       document.querySelector("#header-desc").innerHTML += `
         <div class="row mx-4">
@@ -21,7 +20,7 @@ function descrevePersonagem(idPersonagem) {
               id="img-desc"
               src=${personagem.image.path}.${personagem.image.extension}
               class="card-img p-1 border bg-light"
-              alt="personagem #"
+              alt=${personagem.nome}
             />
           </figure>
           <div class="container-fluid rounded-2 bg-dark opacity-75 col m-4 p-3">
@@ -31,20 +30,34 @@ function descrevePersonagem(idPersonagem) {
             </p>
           </div>
         </div>`;
+    });
+}
+async function descreveComic(idPersonagem) {
+  axios
+    .get(`${urlComic}` + idPersonagem)
+    .then((response) => {
+      // console.log(response.data);
+      return response.data;
+    })
+    .then((data) => {
+      document.querySelector("#comic-card").innerHTML = "";
+
+      let comics = data;
+      console.log(comics);
+
       comics.forEach((comic) => {
         document.querySelector("#comic-card").innerHTML += `
       <div id="char-card-desc" class="p-1 rounded-2">
           <a
             data-bs-toggle="tooltip"
             data-bs-placement="top"
-            title=${comic.name}
-            target="_black"
+            title=${comic.nome}            
           >
             <div class="card bg-secundary p-1 text-black rounded-2">
               <img
-                src=""
+                src=${comic.image.path}.${comic.image.extension}
                 class="card-img-top"
-                alt="personagem #"
+                alt=${comic.nome}
               />
               <div
                 class="
@@ -55,7 +68,7 @@ function descrevePersonagem(idPersonagem) {
                   p-1
                 "
               >
-                <h6 class="card-text">${comic.name}</h6>
+                <h6 class="card-text">${comic.nome}</h6>
               </div>
             </div>
           </a>
@@ -67,4 +80,5 @@ function descrevePersonagem(idPersonagem) {
 
 document.addEventListener("DOMContentLoaded", () => {
   descrevePersonagem(personagemId);
+  descreveComic(personagemId);
 });
