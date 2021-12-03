@@ -6,7 +6,6 @@ function descrevePersonagem(idPersonagem) {
   axios
     .get(`${url}` + idPersonagem)
     .then((response) => {
-      // console.log(response.data);
       return response.data;
     })
     .then((data) => {
@@ -36,14 +35,12 @@ async function descreveComic(idPersonagem) {
   axios
     .get(`${urlComic}` + idPersonagem)
     .then((response) => {
-      // console.log(response.data);
       return response.data;
     })
     .then((data) => {
       document.querySelector("#comic-card").innerHTML = "";
 
       let comics = data;
-      console.log(comics);
 
       comics.forEach((comic) => {
         document.querySelector("#comic-card").innerHTML += `

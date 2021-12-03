@@ -66,7 +66,7 @@ function listaPersonagens(pagina) {
 function carregarPersonagem(id) {
   let personagemSelecionado = id;
   localStorage.setItem("id", JSON.stringify(personagemSelecionado));
-  window.location.href = `../html/descricao.html?id=${personagemSelecionado}`;
+  window.location.href = `./descricao.html?id=${personagemSelecionado}`;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
