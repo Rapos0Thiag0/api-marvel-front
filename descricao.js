@@ -1,5 +1,5 @@
-const url = "https://apimarvel-first.herokuapp.com/personagens/";
-const urlComic = "https://apimarvel-first.herokuapp.com/comic/";
+const url = "https://api-marvel-back.herokuapp.com/personagens/";
+const urlComic = "https://api-marvel-back.herokuapp.com/comic/";
 let personagemId = JSON.parse(localStorage.getItem("id"));
 
 function descrevePersonagem(idPersonagem) {
