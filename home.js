@@ -1,4 +1,4 @@
-const url = "https://apimarvel-first.herokuapp.com/personagens?";
+const url = "https://api-marvel-back.herokuapp.com/personagens?";
 let currentPage = 1;
 let lastPage;
 
